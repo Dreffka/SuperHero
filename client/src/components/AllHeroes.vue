@@ -18,7 +18,7 @@
 
             <a :href="/heroes/ + hero.id" class="waves-effect green btn">Open</a>
             <a :href="/edit/ + hero.id" class="waves-effect orange btn">Edit</a>
-            <button class="waves-effect red btn" @click="deleteHero(hero._id)">Delete</button>
+           
           
           </div>
         </div>
@@ -96,17 +96,6 @@ export default {
       this.currentPage = value
       this.retrieveHeroes()
     },
-
-    deleteHero() {
-      HeroesDataService.delete()
-        .then(response => {
-          console.log(response.data)
-          this.$router.push({ name: "heroes" })
-        })
-        .catch(e => {
-          console.log(e)
-        })
-    }
   },
   mounted() {
     this.retrieveHeroes()
