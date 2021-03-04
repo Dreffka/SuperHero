@@ -8,7 +8,9 @@
 cd server
 npm init
 
-2. Запускаем сервер
+2. Открываем server/app/config/db.config.js и в строке - подключи свою mongoDB
+
+3. Запускаем сервер
 npm run dev
 
 (в браузере http://localhost:8080)
